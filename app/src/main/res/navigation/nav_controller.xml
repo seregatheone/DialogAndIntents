@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_controller"
+    app:startDestination="@id/crimeFragment">
+
+    <fragment
+        android:id="@+id/crimeFragment"
+        android:name="com.example.a16.CrimeFragment"
+        android:label="fragment_crime"
+        tools:layout="@layout/fragment_crime" >
+        <action
+            android:id="@+id/action_crimeFragment_to_dataPickerFragment"
+            app:destination="@id/dataPickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataPickerFragment"
+        android:name="com.example.a16.DataPickerFragment"
+        android:label="fragment_data_picker"
+        tools:layout="@layout/fragment_data_picker" >
+        <action
+            android:id="@+id/action_dataPickerFragment_to_crimeFragment"
+            app:destination="@id/crimeFragment" />
+    </fragment>
+</navigation>
